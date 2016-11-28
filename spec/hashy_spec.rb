@@ -30,4 +30,30 @@ describe(Hashy) do
       expect(test_hashy.has_key?("a")).to eq true
     end
   end
+  describe('#keys') do
+    it('returns all the keys') do
+      test_hashy = Hashy.new()
+      test_hashy.store("a", 1)
+      test_hashy.store("b", 2)
+      test_hashy.store("c", 3)
+      expect(test_hashy.keys).to eq(["a", "b", "c"])
+    end
+  end
+  describe('#values') do
+    it('returns all the values') do
+      test_hashy = Hashy.new()
+      test_hashy.store("a", 1)
+      test_hashy.store("b", 2)
+      test_hashy.store("c", 3)
+      expect(test_hashy.values).to eq([1, 2, 3])
+    end
+  end
+  # describe('#invert') do
+  #   it('inverts the array') do
+  #     test_hashy = Hashy.new()
+  #     test_hashy.store("a", 1)
+  #     inverted_hashy = test_hashy.invert
+  #     expect(test_hashy)
+  #   end
+  # end
 end

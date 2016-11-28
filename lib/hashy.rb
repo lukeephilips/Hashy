@@ -6,8 +6,8 @@ also_reload('lib/**/*.rb')
 
 class Hashy
   define_method(:initialize) do
-    @keys = ["a"]
-    @values = [1]
+    @keys = []
+    @values = []
   end
   define_method(:store) do |key, value|
     @keys.push(key)
@@ -24,5 +24,11 @@ class Hashy
   end
   define_method(:has_key?) do |key|
     @keys.include?(key)
+  end
+  define_method(:keys) do
+    @keys
+  end
+  define_method(:values) do
+    @values
   end
 end
