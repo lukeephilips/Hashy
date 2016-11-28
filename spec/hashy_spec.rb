@@ -48,12 +48,12 @@ describe(Hashy) do
       expect(test_hashy.values).to eq([1, 2, 3])
     end
   end
-  # describe('#invert') do
-  #   it('inverts the array') do
-  #     test_hashy = Hashy.new()
-  #     test_hashy.store("a", 1)
-  #     inverted_hashy = test_hashy.invert
-  #     expect(test_hashy)
-  #   end
-  # end
+  describe('#invert') do
+    it('inverts the array') do
+      test_hashy = Hashy.new()
+      test_hashy.store("a", 1)
+      inverted_hashy = test_hashy.invert
+      expect(test_hashy.invert)to eq (1,'a')
+    end
+  end
 end
