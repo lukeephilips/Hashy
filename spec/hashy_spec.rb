@@ -53,7 +53,7 @@ describe(Hashy) do
       test_hashy = Hashy.new()
       test_hashy.store("a", 1)
       inverted_hashy = test_hashy.invert
-      expect(test_hashy.invert)to eq (1,'a')
+      expect(inverted_hashy.keys).to eq ([1])
     end
   end
 end

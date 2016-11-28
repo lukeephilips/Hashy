@@ -31,4 +31,10 @@ class Hashy
   define_method(:values) do
     @values
   end
+  define_method(:invert) do
+    temp = @keys
+    @keys = @values
+    @values = temp
+    self
+  end
 end
